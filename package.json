@@ -1,0 +1,49 @@
+{
+  "name": "vue-searchable",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "build":
+      "npm run lint && cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
+    "dev": "start-storybook -s ./src/assets -p 9001 -c .storybook",
+    "deploy": "npm run build && node ftp-deploy.js",
+    "lint": "./node_modules/.bin/eslint --fix ."
+  },
+  "peerDependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@storybook/addon-storysource": "^3.4.0",
+    "@storybook/addon-viewport": "^3.4.0",
+    "@storybook/vue": "^3.4.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.4.0",
+    "file-loader": "^1.1.11",
+    "ftps": "^1.1.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^6.0.7",
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-webpack-plugin": "^0.10.4",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.10.0"
+  }
+}
